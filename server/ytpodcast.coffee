@@ -85,7 +85,7 @@ YTApi =
 
     @data.items.forEach (item) =>
       videoId = item.snippet.resourceId.videoId
-      console.log item
+
       duration = moment.isoDuration item.contentDetails.duration if item.contentDetails?
       feed.item
         title: item.snippet.title
