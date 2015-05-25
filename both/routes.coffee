@@ -13,5 +13,9 @@ Router.route '/video/:id', (->
 
 Router.route '/:type/:id', (->
   feed = new YTPodcast @params.type, @params.id, @params.query
-  @response.end feed.getXml()
+  xml = feed.getXml()
+
+  @response.writeHead 200,
+    'Content-Type': 'text/xml; charset=utf-8'
+  @response.end xml
 ), where: 'server'
