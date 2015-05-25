@@ -11,3 +11,9 @@ stylus
 coffeescript
 twbs:bootstrap
 iron:router
+meteorhacks:npm
+
+
+npm-container
+http
+momentjs:moment
